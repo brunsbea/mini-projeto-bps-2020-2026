@@ -97,7 +97,58 @@ Entre as principais colunas disponíveis na base estão:
 
 ## 7. KPIs e métricas
 
-Esta seção será desenvolvida na Sprint 3.
+Foram definidos os seis KPIs obrigatórios para acompanhamento das compras registradas no BPS.
+
+| KPI | Definição |
+|---|---|
+| Valor total registrado | Soma do campo `vl_preco_total` |
+| Quantidade total de itens comprados | Soma do campo `qt_medicamento` |
+| Número de registros de compra | Contagem dos registros da base |
+| Instituições compradoras | Contagem distinta de `cnpj_instituicao` |
+| Fornecedores | Contagem distinta de `cnpj_fornecedor` |
+| Preço unitário médio ponderado | Valor total registrado dividido pela quantidade total de itens comprados |
+
+Os valores de referência calculados sobre a base consolidada de 2020 a 2026 são:
+
+- Valor total registrado: R$ 115.063.593.346,89
+- Quantidade total de itens comprados: 64.807.253.018
+- Número de registros de compra: 367.003
+- Instituições compradoras: 854
+- Fornecedores: 3.663
+- Preço unitário médio ponderado: R$ 1,7755
+
+O preço unitário médio ponderado foi calculado pela fórmula:
+
+`SUM(vl_preco_total) / SUM(qt_medicamento)`
+
+Esse indicador deve ser interpretado com cuidado quando os filtros incluírem produtos, unidades de fornecimento ou apresentações diferentes.
+
+Como métricas auxiliares para análise da distribuição dos preços, também foram avaliadas a média simples e a mediana do preço unitário. Na base completa, foram encontrados:
+
+- preço unitário médio simples: R$ 172,7928;
+- mediana do preço unitário: R$ 1,8600.
+
+A diferença entre essas medidas reforça a necessidade de evitar interpretações baseadas apenas na média simples dos preços unitários.
+
+### Critérios para comparação de preços
+
+As comparações de preços unitários vão ser realizadas prioritariamente entre registros com o mesmo código CATMAT e a mesma unidade de fornecimento.
+
+A análise da base identificou:
+
+- 13.504 códigos CATMAT distintos;
+- 44 unidades de fornecimento distintas;
+- 9.795 grupos formados por CATMAT e unidade de fornecimento com pelo menos dois registros.
+
+Os campos `co_catmat` e `un_fornecimento` apresentam, respectivamente, 100% e 99,99% de preenchimento, permitindo sua utilização como critérios principais de comparabilidade.
+
+Quando disponíveis, os campos de capacidade e unidade de medida poderão ser utilizados para aumentar a precisão das comparações. Esses campos apresentam aproximadamente 36,39% de preenchimento e, por isso, não serão utilizados como requisito obrigatório para todos os registros.
+
+Fabricante, fornecedor, instituição compradora, localidade, modalidade de compra e período serão utilizados como dimensões adicionais para investigar diferenças de preços.
+
+Os preços unitários não serão somados. Para comparação entre registros comparáveis poderão ser utilizadas medidas como média, mediana, mínimo e máximo, conforme o objetivo da análise.
+
+Diferenças de preço não serão interpretadas automaticamente como economia, sobrepreço ou irregularidade, pois podem estar relacionadas às características específicas de cada aquisição.
 
 ## 8. Dashboard
 
