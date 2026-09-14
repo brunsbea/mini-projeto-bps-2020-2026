@@ -223,15 +223,120 @@ O dashboard possui mais de cinco visualizações, além dos cartões de KPI e do
 
 ## 9. Principais análises e descobertas
 
-Esta seção será preenchida após a análise dos resultados.
+A análise dos 367.003 registros consolidados entre 2020 e 2026 permitiu identificar padrões de evolução temporal, concentração geográfica, participação de instituições, fornecedores e fabricantes, além de diferenças de preços entre registros comparáveis.
+
+### Evolução do valor registrado
+
+O ano de 2025 apresentou o maior valor total registrado no período, com aproximadamente R$ 50,90 bilhões, correspondendo a cerca de 44,2% do valor total da base.
+
+Entretanto, 2025 não foi o ano com a maior quantidade adquirida. O maior volume em quantidade ocorreu em 2022, com aproximadamente 15,21 bilhões de unidades registradas.
+
+Esse resultado mostra que a evolução do valor financeiro não acompanha necessariamente a evolução da quantidade comprada, podendo ser influenciada pelo tipo de produto adquirido, preço unitário, apresentação, volume das contratações e demais características das compras.
+
+O ano de 2026 deve ser interpretado com cautela, pois a base utilizada contém apenas os registros disponíveis até o período de extração e pode não representar um ano completo.
+
+### Distribuição geográfica
+
+Paraná e São Paulo apresentaram os maiores valores registrados entre as unidades federativas analisadas.
+
+O Paraná totalizou aproximadamente R$ 42,94 bilhões e São Paulo cerca de R$ 42,75 bilhões. Em conjunto, os dois estados representam aproximadamente 74,5% do valor total registrado na base.
+
+Entre os municípios, São Paulo apresentou o maior valor total, seguido por Curitiba e Fazenda Rio Grande.
+
+Essa concentração indica a importância de analisar separadamente os principais estados e municípios para compreender quais registros, instituições e produtos contribuem para os maiores volumes financeiros.
+
+### Instituições compradoras
+
+A análise por instituição foi realizada utilizando o CNPJ como identificador, evitando agrupar instituições diferentes que possuam nomes iguais ou semelhantes.
+
+As maiores instituições em valor registrado apresentaram forte participação no total da base. Duas instituições denominadas "SECRETARIA DE ESTADO DA SAUDE", por exemplo, possuem CNPJs distintos e foram analisadas separadamente, registrando aproximadamente R$ 38,94 bilhões e R$ 25,25 bilhões.
+
+Esse resultado demonstra a importância de utilizar identificadores únicos nas análises, e não apenas o nome textual das instituições.
+
+### Produtos
+
+Os produtos com maiores valores totais registrados foram:
+
+1. Penicilamina 250 mg;
+2. Octreotida 0,1 mg/ml;
+3. Amoxicilina 500 mg.
+
+Somados, esses três produtos representam aproximadamente 44,2% do valor total registrado no período.
+
+Por outro lado, os produtos com maior quantidade adquirida são diferentes. Entre eles aparecem dieta enteral, amitriptilina 25 mg, losartana 50 mg, hidroclorotiazida 25 mg e omeprazol 20 mg.
+
+Essa diferença reforça que produtos com maior valor financeiro não são necessariamente aqueles adquiridos em maior quantidade.
+
+### Fornecedores e fabricantes
+
+A análise por fornecedor e fabricante também utilizou o CNPJ para distinguir corretamente empresas que possuam nomes semelhantes ou mais de um cadastro.
+
+Entre os fornecedores, os maiores valores registrados foram observados para Agille Comércio de Medicamentos Ltda., Portal Ltda. e Med4 Importadora e Distribuidora Ltda.
+
+Entre os fabricantes, destacaram-se Medquímica Indústria Farmacêutica Ltda., Sun Farmacêutica do Brasil Ltda. e Unichem Farmacêutica do Brasil Ltda.
+
+Esses resultados evidenciam concentração relevante do valor registrado em determinados agentes do mercado, mas não permitem, isoladamente, concluir sobre competitividade, eficiência ou condições comerciais.
+
+### Modalidades de compra
+
+O Pregão foi a modalidade com maior participação financeira, somando aproximadamente R$ 106,13 bilhões, ou cerca de 92,2% de todo o valor registrado na base.
+
+Na sequência aparecem Registro de Preços e Dispensa de Licitação.
+
+A elevada participação do Pregão demonstra sua relevância nos registros analisados e justifica sua utilização como uma dimensão importante para filtros e investigações no dashboard.
+
+### Investigação de diferenças de preços
+
+Para investigar a variação de preços entre registros mais comparáveis, foi selecionado o CATMAT 271089, correspondente à Amoxicilina 500 mg, com unidade de fornecimento "COMPRIMIDO".
+
+Inicialmente foram encontrados 190 registros distribuídos entre 2020 e 2026, envolvendo 106 fornecedores e 18 unidades federativas.
+
+Para reduzir diferenças relacionadas a período e localização, foi escolhido o recorte de 2021 no estado do Piauí, que apresentou 18 registros e 9 fornecedores distintos.
+
+Nesse recorte foram identificadas:
+
+- 18 compras registradas;
+- 9 fornecedores;
+- 17 instituições compradoras;
+- 1 fabricante.
+
+O preço unitário variou entre R$ 0,0038 e R$ 0,6800. A mediana foi de R$ 0,2750 e o preço médio ponderado pela quantidade foi de aproximadamente R$ 0,3001.
+
+Mesmo após restringir produto, unidade de fornecimento, ano, estado e fabricante, permaneceram diferenças importantes entre os preços registrados.
+
+Entretanto, essas diferenças não representam automaticamente economia, sobrepreço ou irregularidade. Outros fatores podem influenciar os valores, como quantidade adquirida, instituição compradora, modalidade da compra, condições de negociação, apresentação do produto e características específicas de cada contratação.
+
+O valor mínimo de R$ 0,0038 também se mostrou muito distante dos demais registros do grupo, sendo um exemplo de observação que merece verificação individual na fonte antes de qualquer conclusão.
 
 ## 10. Recomendações
 
-Esta seção será preenchida após a análise dos resultados.
+Com base nas análises realizadas, recomenda-se utilizar o dashboard principalmente como ferramenta de apoio à investigação e priorização de registros que mereçam análise mais detalhada.
+
+Diferenças relevantes de preço devem ser avaliadas somente entre produtos realmente comparáveis, priorizando o mesmo código CATMAT, unidade de fornecimento, apresentação, período e localização. Quando disponíveis, informações como capacidade, unidade de medida, fabricante, fornecedor, modalidade e quantidade também devem ser consideradas.
+
+Registros com valores muito distantes da distribuição observada, como preços unitários extremamente baixos ou elevados, devem ser verificados diretamente na base de origem antes de qualquer interpretação.
+
+Também é recomendável acompanhar separadamente estados, municípios, instituições, produtos, fornecedores e fabricantes que concentram valores elevados, buscando entender quais fatores explicam essa participação.
+
+O dashboard pode ser utilizado como ponto de partida para análises futuras mais específicas, incluindo comparação entre períodos, instituições e modalidades de aquisição.
 
 ## 11. Limitações
 
-Esta seção será atualizada ao final da análise considerando as limitações identificadas na base e no projeto.
+A análise apresenta algumas limitações que devem ser consideradas na interpretação dos resultados.
+
+A base do BPS possui campos com diferentes níveis de preenchimento. Algumas variáveis apresentam elevada quantidade de valores ausentes, principalmente em determinados anos. Esses campos foram preservados como nulos, evitando preenchimentos artificiais que poderiam distorcer as análises.
+
+Também foram identificadas mudanças no nível de preenchimento de alguns campos ao longo dos anos, como o número da ata, o que limita comparações históricas utilizando essas variáveis.
+
+Os valores analisados representam registros existentes no BPS e não devem ser interpretados automaticamente como o total de gastos em saúde de cada estado, município ou instituição.
+
+O ano de 2026 pode representar um período parcial, dependendo da data de atualização e extração dos arquivos utilizados.
+
+A comparação de preços exige atenção especial. Produtos com o mesmo CATMAT ainda podem apresentar diferenças de apresentação, capacidade, unidade de medida, fabricante, quantidade, localização, período, modalidade ou condições de negociação.
+
+Na versão otimizada utilizada no Google Data Studio, alguns campos menos completos, como capacidade e unidade de medida da capacidade, não foram incluídos devido à necessidade de reduzir o tamanho do arquivo para respeitar o limite de upload da ferramenta. Dessa forma, a página de análise de preços utiliza principalmente produto e unidade de fornecimento como critérios de comparabilidade, complementados por ano e UF.
+
+Por esse motivo, diferenças de preços apresentadas no dashboard devem ser utilizadas como sinal para investigação e não como evidência automática de economia, sobrepreço ou irregularidade.
 
 ## 12. Instruções para reprodução do projeto
 
