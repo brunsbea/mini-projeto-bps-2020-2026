@@ -158,7 +158,7 @@ Para possibilitar o carregamento dos dados na ferramenta, foi criado o script `p
 
 ### Link do dashboard
 
-[Dashboard BPS 2020-2026](https://datastudio.google.com/s/ihxCV69BG0s)
+[Dashboard BPS 2020-2026](https://datastudio.google.com/reporting/5159e652-b6bf-40cd-b697-c0990cbe33a6)
 
 ### Estrutura do dashboard
 
