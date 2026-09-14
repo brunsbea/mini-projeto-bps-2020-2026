@@ -8,3 +8,6 @@ __pycache__/
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Arquivos auxiliares utilizados para upload no Data Studio
+data/looker/
