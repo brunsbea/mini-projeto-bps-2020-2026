@@ -152,7 +152,74 @@ Diferenças de preço não serão interpretadas automaticamente como economia, s
 
 ## 8. Dashboard
 
-Esta seção será atualizada após a construção do dashboard.
+O dashboard foi desenvolvido no Google Data Studio a partir de uma versão otimizada da base consolidada.
+
+Para possibilitar o carregamento dos dados na ferramenta, foi criado o script `python/preparar_looker.py`, responsável por selecionar os campos necessários para as análises e gerar um arquivo auxiliar específico para o dashboard, mantendo os 367.003 registros da base original.
+
+### Link do dashboard
+
+[Dashboard BPS 2020-2026](https://datastudio.google.com/s/ihxCV69BG0s)
+
+### Estrutura do dashboard
+
+O dashboard foi organizado em quatro páginas.
+
+#### Página 1 - Visão Geral
+
+Apresenta os seis KPIs principais do projeto:
+
+- valor total registrado;
+- quantidade total de itens comprados;
+- número de registros de compra;
+- quantidade de instituições compradoras;
+- quantidade de fornecedores;
+- preço unitário médio ponderado.
+
+Também apresenta:
+
+- evolução do valor total registrado entre 2020 e 2026;
+- Top 10 estados por valor total registrado;
+- filtros interativos de ano, UF e modalidade.
+
+#### Página 2 - Detalhamento das Compras
+
+Apresenta análises de concentração das compras por:
+
+- Top 10 instituições por valor total registrado;
+- Top 10 produtos por valor total registrado;
+- Top 10 fornecedores por valor total registrado;
+- valor total registrado por modalidade de compra.
+
+A página também possui filtros de ano, UF e modalidade.
+
+#### Página 3 - Análise de Preços
+
+Destinada à investigação de diferenças de preços entre registros comparáveis.
+
+A comparação utiliza filtros de:
+
+- produto;
+- unidade de fornecimento;
+- ano;
+- UF.
+
+Para cada fornecedor são apresentados:
+
+- preço unitário médio;
+- preço unitário mínimo;
+- preço unitário máximo.
+
+As diferenças observadas devem ser interpretadas com cautela e somente após a seleção de produtos e unidades de fornecimento comparáveis.
+
+#### Página 4 - Geografia e Mercado
+
+Apresenta:
+
+- Top 10 municípios por valor total registrado;
+- Top 10 fabricantes por valor total registrado;
+- filtros de ano, UF e modalidade.
+
+O dashboard possui mais de cinco visualizações, além dos cartões de KPI e dos filtros interativos.
 
 ## 9. Principais análises e descobertas
 
