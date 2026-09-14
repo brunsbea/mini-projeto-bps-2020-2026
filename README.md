@@ -221,6 +221,24 @@ Apresenta:
 
 O dashboard possui mais de cinco visualizações, além dos cartões de KPI e dos filtros interativos.
 
+### Imagens do dashboard
+
+#### Visão Geral
+
+![Visão Geral do Dashboard](images/dashboard_visao_geral.png)
+
+#### Detalhamento das Compras
+
+![Detalhamento das Compras](images/dashboard_detalhamento.png)
+
+#### Análise de Preços
+
+![Análise de Preços](images/dashboard_precos.png)
+
+#### Geografia e Mercado
+
+![Geografia e Mercado](images/dashboard_geografia_mercado.png)
+
 ## 9. Principais análises e descobertas
 
 A análise dos 367.003 registros consolidados entre 2020 e 2026 permitiu identificar padrões de evolução temporal, concentração geográfica, participação de instituições, fornecedores e fabricantes, além de diferenças de preços entre registros comparáveis.
@@ -340,5 +358,91 @@ Por esse motivo, diferenças de preços apresentadas no dashboard devem ser util
 
 ## 12. Instruções para reprodução do projeto
 
-Esta seção será finalizada após a conclusão dos scripts e da estrutura do projeto.# mini-projeto-bps-2020-2026
-Mini-projeto de análise de dados do Banco de Preços em Saúde (BPS) 2020–2026.
+### 1. Clonar o repositório
+
+O projeto utiliza Git LFS para o versionamento dos arquivos de dados de maior tamanho.
+
+```bash
+git lfs install
+git clone https://github.com/brunsbea/mini-projeto-bps-2020-2026.git
+cd mini-projeto-bps-2020-2026
+git lfs pull
+```
+
+### 2. Preparar o ambiente Python
+
+É necessário possuir Python instalado e a biblioteca `pandas`.
+
+```bash
+pip install pandas
+```
+
+### 3. Bases de dados
+
+Os arquivos anuais originais do BPS estão armazenados em:
+
+```text
+data/raw/
+```
+
+Os arquivos utilizados correspondem aos anos de 2020 a 2026.
+
+### 4. Executar a consolidação
+
+Para tratar e consolidar as bases anuais:
+
+```bash
+python python/consolidar_bps.py
+```
+
+O arquivo consolidado é gerado em:
+
+```text
+data/processed/BPS_20_26_BeatrizBruns.csv
+```
+
+### 5. Validar os KPIs e os critérios de comparabilidade
+
+Para calcular e validar os principais indicadores:
+
+```bash
+python python/calcular_kpis.py
+```
+
+Para verificar os critérios utilizados nas comparações de preços:
+
+```bash
+python python/verificar_comparabilidade.py
+```
+
+### 6. Executar as análises
+
+Para reproduzir os rankings, as análises temporais, geográficas e a investigação de preços:
+
+```bash
+python python/analisar_resultados.py
+```
+
+### 7. Preparar a base utilizada no dashboard
+
+Devido ao limite de tamanho para upload no Google Data Studio, foi criada uma versão otimizada da base consolidada.
+
+Para gerar esse arquivo:
+
+```bash
+python python/preparar_looker.py
+```
+
+O arquivo auxiliar é criado em:
+
+```text
+data/looker/BPS_Looker_2020_2026.csv
+```
+
+A pasta `data/looker/` não é versionada no Git, pois o arquivo pode ser reproduzido pelo script.
+
+### 8. Dashboard
+
+O arquivo otimizado pode ser carregado no Google Data Studio para reprodução das visualizações.
+
+As configurações dos KPIs, filtros, páginas e análises utilizadas no projeto estão descritas na seção 8 deste README.
